@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alexandre Dubois - Game Developer & Designer. Portfolio professionnel showcasing innovative games and interactive experiences.">
-    <title>Alexandre Dubois - Game Developer</title>
+    <meta name="description" content="Hatim Kadiri - Game Developer & Designer. Portfolio professionnel showcasing innovative games and interactive experiences.">
+    <title>Hatim Kadiri - Game Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #06b6d4;
-            --accent: #f59e0b;
-            --success: #10b981;
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-tertiary: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --border: #27272a;
-            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
-            --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0891b2;
+            --accent: #dc2626;
+            --success: #059669;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #475569;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0891b2 100%);
+            --gradient-secondary: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -41,7 +41,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Roboto', system-ui, -apple-system, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
@@ -58,14 +58,14 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--border);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .navbar.scrolled {
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(15, 23, 42, 0.95);
             box-shadow: var(--shadow-lg);
         }
 
@@ -79,8 +79,8 @@
         }
 
         .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
             font-weight: 700;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -92,7 +92,7 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -100,7 +100,7 @@
             color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.875rem;
+            font-size: 0.95rem;
             letter-spacing: 0.025em;
             padding: 0.5rem 0;
             position: relative;
@@ -134,7 +134,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+            background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
         }
 
         .hero-container {
@@ -142,7 +142,7 @@
             margin: 0 auto;
             padding: 2rem;
             display: grid;
-            grid-template-columns: 1fr 400px;
+            grid-template-columns: 1fr 350px;
             gap: 4rem;
             align-items: center;
             position: relative;
@@ -150,36 +150,45 @@
         }
 
         .hero-content {
-            max-width: 600px;
+            max-width: 650px;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            gap: 0.75rem;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
             color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
             margin-bottom: 2rem;
             backdrop-filter: blur(10px);
         }
 
         .hero-badge::before {
-            content: '🚀';
-            font-size: 1rem;
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         .hero-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.02em;
         }
 
         .hero-title .gradient-text {
@@ -192,36 +201,38 @@
         .hero-subtitle {
             font-size: 1.25rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
             font-weight: 400;
         }
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.25rem;
             align-items: center;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            border-radius: 0.75rem;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
             font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 0.95rem;
             text-decoration: none;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            letter-spacing: 0.025em;
         }
 
         .btn-primary {
             background: var(--gradient-primary);
             color: white;
+            box-shadow: var(--shadow-md);
         }
 
         .btn-primary:hover {
@@ -232,7 +243,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--text-primary);
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
         }
 
         .btn-secondary:hover {
@@ -242,11 +253,14 @@
 
         .hero-visual {
             position: relative;
-            height: 400px;
+            height: 350px;
             background: var(--bg-secondary);
-            border-radius: 1.5rem;
+            border-radius: 16px;
             border: 1px solid var(--border);
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-visual::before {
@@ -262,49 +276,12 @@
         }
 
         .hero-visual-content {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
             z-index: 2;
-            font-size: 6rem;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
-
-        .hero-visual:hover .hero-visual-content {
-            filter: grayscale(0%);
-        }
-
-        /* Stats */
-        .stats {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 3rem;
-            z-index: 2;
-        }
-
-        .stat-item {
             text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         /* Section Styles */
@@ -324,18 +301,19 @@
         }
 
         .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
             margin-bottom: 1rem;
             letter-spacing: -0.025em;
         }
 
         .section-subtitle {
-            font-size: 1.125rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* About Section */
@@ -345,7 +323,7 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 4rem;
             align-items: start;
         }
@@ -353,8 +331,8 @@
         .profile-card {
             background: var(--bg-tertiary);
             border: 1px solid var(--border);
-            border-radius: 1.5rem;
-            padding: 2rem;
+            border-radius: 16px;
+            padding: 2.5rem;
             text-align: center;
             position: sticky;
             top: 2rem;
@@ -365,63 +343,64 @@
             height: 120px;
             border-radius: 50%;
             background: var(--gradient-primary);
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
             position: relative;
             overflow: hidden;
         }
 
-        .profile-image::after {
-            content: '';
-            position: absolute;
-            inset: 2px;
-            border-radius: 50%;
-            background: var(--bg-tertiary);
-        }
-
         .profile-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .profile-role {
             color: var(--text-secondary);
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-school {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
 
         .profile-links {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .profile-link {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem;
+            gap: 1rem;
+            padding: 1rem;
             background: var(--bg-secondary);
             border: 1px solid var(--border);
-            border-radius: 0.75rem;
+            border-radius: 8px;
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
         .profile-link:hover {
             color: var(--text-primary);
             background: var(--bg-primary);
+            transform: translateY(-1px);
         }
 
         .about-text {
-            font-size: 1.125rem;
+            font-size: 1.15rem;
             line-height: 1.8;
             color: var(--text-secondary);
         }
@@ -438,16 +417,16 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
 
         .skill-card {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
-            border-radius: 1.25rem;
-            padding: 2rem;
+            border-radius: 16px;
+            padding: 2.5rem;
             position: relative;
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -464,165 +443,59 @@
         }
 
         .skill-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
             box-shadow: var(--shadow-xl);
-            border-color: rgba(99, 102, 241, 0.3);
+            border-color: rgba(37, 99, 235, 0.3);
         }
 
         .skill-icon {
-            width: 3rem;
-            height: 3rem;
-            background: rgba(99, 102, 241, 0.1);
-            border-radius: 0.75rem;
+            width: 4rem;
+            height: 4rem;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 1.5rem;
         }
 
         .skill-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.125rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .skill-description {
             color: var(--text-secondary);
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
         /* Projects Section */
-        .projects-grid {
-            display: grid;
-            gap: 2rem;
+        .projects-placeholder {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--bg-secondary);
+            border: 2px dashed var(--border);
+            border-radius: 16px;
             margin-top: 3rem;
         }
 
-        .project-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 1.5rem;
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            min-height: 300px;
-        }
-
-        .project-card:nth-child(even) {
-            grid-template-columns: 1fr 400px;
-        }
-
-        .project-card:nth-child(even) .project-image {
-            order: 2;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            border-color: rgba(99, 102, 241, 0.3);
-        }
-
-        .project-image {
-            position: relative;
-            background: var(--gradient-secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            overflow: hidden;
-        }
-
-        .project-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-
-        .project-card:hover .project-image::after {
-            transform: translateX(100%);
-        }
-
-        .project-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-header {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-title {
-            font-family: 'Space Grotesk', sans-serif;
+        .projects-placeholder h3 {
+            font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.025em;
-        }
-
-        .project-description {
+            font-weight: 600;
+            margin-bottom: 1rem;
             color: var(--text-secondary);
-            line-height: 1.6;
-            font-size: 0.9375rem;
         }
 
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .tech-tag {
-            background: rgba(99, 102, 241, 0.1);
-            color: var(--primary);
-            padding: 0.375rem 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.625rem 1.25rem;
-            background: transparent;
-            color: var(--text-primary);
-            text-decoration: none;
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            background: var(--bg-tertiary);
-            transform: translateY(-1px);
-        }
-
-        .project-link.primary {
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-
-        .project-link.primary:hover {
-            background: var(--primary-dark);
+        .projects-placeholder p {
+            color: var(--text-muted);
+            font-size: 1rem;
         }
 
         /* Contact Section */
@@ -632,58 +505,67 @@
 
         .contact-content {
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin: 3rem 0;
         }
 
         .contact-item {
             background: var(--bg-tertiary);
             border: 1px solid var(--border);
-            border-radius: 1rem;
-            padding: 2rem;
+            border-radius: 12px;
+            padding: 2.5rem;
             text-align: center;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .contact-item:hover {
             transform: translateY(-4px);
-            border-color: rgba(99, 102, 241, 0.3);
+            border-color: rgba(37, 99, 235, 0.3);
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-secondary);
         }
 
         .contact-icon {
-            width: 3rem;
-            height: 3rem;
-            background: rgba(99, 102, 241, 0.1);
+            width: 3.5rem;
+            height: 3.5rem;
+            background: rgba(37, 99, 235, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
             font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
         }
 
         .contact-label {
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .contact-value {
             color: var(--text-secondary);
-            font-size: 0.875rem;
+            font-size: 0.95rem;
         }
 
         /* Footer */
         .footer {
             background: var(--bg-primary);
             border-top: 1px solid var(--border);
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
         }
 
@@ -691,7 +573,7 @@
             max-width: 1200px;
             margin: 0 auto;
             color: var(--text-muted);
-            font-size: 0.875rem;
+            font-size: 0.95rem;
         }
 
         /* Responsive Design */
@@ -699,25 +581,16 @@
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 2rem;
+                gap: 3rem;
             }
             
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
             }
             
             .profile-card {
                 position: static;
-            }
-            
-            .project-card,
-            .project-card:nth-child(even) {
-                grid-template-columns: 1fr;
-            }
-            
-            .project-card:nth-child(even) .project-image {
-                order: 0;
             }
         }
 
@@ -727,7 +600,7 @@
             }
             
             .nav-menu {
-                gap: 1rem;
+                gap: 1.5rem;
             }
             
             .section {
@@ -739,10 +612,8 @@
                 align-items: stretch;
             }
             
-            .stats {
-                position: static;
-                transform: none;
-                margin-top: 2rem;
+            .btn {
+                text-align: center;
                 justify-content: center;
             }
         }
@@ -774,13 +645,14 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">Alexandre Dubois</div>
+            <div class="logo">Hatim Kadiri</div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Accueil</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
                 <li><a href="#skills" class="nav-link">Compétences</a></li>
                 <li><a href="#projects" class="nav-link">Projets</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="btn btn-primary" style="margin-left: 1rem; padding: 0.625rem 1.25rem; font-size: 0.875rem;">Télécharger CV</a></li>
             </ul>
         </div>
     </nav>
@@ -789,18 +661,17 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge fade-in-up">Disponible pour stage • Janvier 2025</div>
+                <div class="hero-badge fade-in-up">Disponible pour stage</div>
                 <h1 class="hero-title fade-in-up delay-100">
                     <span class="gradient-text">Game Developer</span><br>
                     & Creative Designer
                 </h1>
                 <p class="hero-subtitle fade-in-up delay-200">
-                    Étudiant passionné spécialisé dans le développement de jeux innovants et d'expériences interactives immersives. À la recherche d'un stage pour mettre en pratique mes compétences techniques et créatives.
+                    Étudiant en Game Development au Collège LaSalle Montréal, passionné par la création d'expériences interactives innovantes et l'exploration des technologies émergentes du jeu vidéo.
                 </p>
                 <div class="hero-cta fade-in-up delay-300">
-                    <a href="#projects" class="btn btn-primary">
-                        Voir mes projets
-                        <span>→</span>
+                    <a href="#skills" class="btn btn-primary">
+                        Découvrir mes compétences
                     </a>
                     <a href="#contact" class="btn btn-secondary">
                         Me contacter
@@ -808,21 +679,10 @@
                 </div>
             </div>
             <div class="hero-visual fade-in-up delay-400">
-                <div class="hero-visual-content">🎮</div>
-            </div>
-        </div>
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">8+</div>
-                <div class="stat-label">Projets</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">3</div>
-                <div class="stat-label">Années d'étude</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Technologies</div>
+                <div class="hero-visual-content">
+                    Projets à venir<br>
+                    <small style="font-size: 0.9rem; opacity: 0.7;">Espace réservé pour mes créations</small>
+                </div>
             </div>
         </div>
     </section>
@@ -833,41 +693,42 @@
             <div class="section-header">
                 <h2 class="section-title">À propos de moi</h2>
                 <p class="section-subtitle">
-                    Découvrez mon parcours, ma passion pour le game development et ma vision créative
+                    Découvrez mon parcours académique, ma passion pour le développement de jeux et ma vision créative
                 </p>
             </div>
             <div class="about-content">
                 <div class="profile-card">
-                    <div class="profile-image">👨‍💻</div>
-                    <h3 class="profile-name">Alexandre Dubois</h3>
+                    <div class="profile-image">HK</div>
+                    <h3 class="profile-name">Hatim Kadiri</h3>
                     <p class="profile-role">Game Developer Student</p>
+                    <p class="profile-school">Collège LaSalle, Montréal</p>
                     <div class="profile-links">
-                        <a href="#" class="profile-link">
-                            📧 alexandre.dubois@email.com
+                        <a href="mailto:Hatimkadiri1@gmail.com" class="profile-link">
+                            Email professionnel
+                        </a>
+                        <a href="https://www.linkedin.com/in/hatim-kadiri-600a42382" class="profile-link" target="_blank">
+                            Profil LinkedIn
+                        </a>
+                        <a href="https://github.com/Mitah123321" class="profile-link" target="_blank">
+                            Portfolio GitHub
                         </a>
                         <a href="#" class="profile-link">
-                            💼 LinkedIn Profile
-                        </a>
-                        <a href="#" class="profile-link">
-                            🐱 GitHub Portfolio
-                        </a>
-                        <a href="#" class="profile-link">
-                            🎮 itch.io Games
+                            Projets itch.io
                         </a>
                     </div>
                 </div>
                 <div class="about-text">
                     <p>
-                        Passionné par l'univers du jeu vidéo depuis l'enfance, j'ai développé une <strong>expertise technique</strong> et une <strong>vision créative</strong> qui me permettent de concevoir des expériences ludiques engageantes et innovantes.
+                        Actuellement étudiant en <strong>Game Development au Collège LaSalle de Montréal</strong>, je me spécialise dans la création d'expériences ludiques immersives qui repoussent les limites de l'interactivité et de la narration.
                     </p>
                     <p>
-                        Actuellement en <strong>3ème année d'études en Game Development</strong>, je maîtrise les outils de référence de l'industrie (Unity, Unreal Engine) ainsi que plusieurs langages de programmation. Mon approche combine rigueur technique et créativité artistique pour créer des jeux mémorables.
+                        Ma formation me permet de maîtriser les <strong>outils de développement modernes</strong> tout en développant une compréhension approfondie des mécaniques de jeu, de l'expérience utilisateur et des pipelines de production professionnels.
                     </p>
                     <p>
-                        Je recherche un <strong>stage de 6 mois</strong> dans un studio de développement pour mettre en pratique mes compétences, apprendre auprès de professionnels expérimentés et contribuer à des projets ambitieux. Mon objectif est de devenir un <strong>Game Developer polyvalent</strong> capable de transformer des idées en expériences jouables exceptionnelles.
+                        Je recherche un <strong>stage enrichissant</strong> qui me permettra d'appliquer mes connaissances techniques dans un environnement professionnel, d'apprendre auprès d'experts de l'industrie et de contribuer à des projets innovants.
                     </p>
                     <p>
-                        Mes domaines de prédilection incluent le <strong>gameplay programming</strong>, l'<strong>architecture système</strong>, et l'<strong>optimisation des performances</strong>. Je suis également sensible aux aspects UX/UI et à l'importance du game feel dans l'expérience utilisateur.
+                        Mon approche combine <strong>rigueur technique et créativité</strong>, avec un focus particulier sur l'optimisation des performances, la qualité du code et l'expérience utilisateur. Je suis passionné par les défis complexes et l'innovation dans le domaine du jeu vidéo.
                     </p>
                 </div>
             </div>
@@ -880,39 +741,39 @@
             <div class="section-header">
                 <h2 class="section-title">Expertise technique</h2>
                 <p class="section-subtitle">
-                    Un stack technologique moderne et des compétences transversales pour créer des expériences exceptionnelles
+                    Maîtrise des technologies et méthodologies essentielles au développement de jeux modernes
                 </p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3 class="skill-title">Game Programming</h3>
-                    <p class="skill-description">C#, C++, JavaScript • Architecture MVC • Patterns de design • Systèmes de gameplay • Performance optimization</p>
+                    <div class="skill-icon">UE</div>
+                    <h3 class="skill-title">Unreal Engine</h3>
+                    <p class="skill-description">Développement avec Unreal Engine 5, maîtrise du système Blueprint pour le prototypage rapide et l'implémentation de logiques de gameplay complexes.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🎯</div>
-                    <h3 class="skill-title">Game Engines</h3>
-                    <p class="skill-description">Unity 3D • Unreal Engine 5 • Godot • Custom engine scripting • Cross-platform deployment • Build automation</p>
+                    <div class="skill-icon">C++</div>
+                    <h3 class="skill-title">Programmation C++</h3>
+                    <p class="skill-description">Développement natif en C++ pour les performances critiques, programmation orientée objet et intégration avec les moteurs de jeu.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
+                    <div class="skill-icon">U3D</div>
+                    <h3 class="skill-title">Unity 3D</h3>
+                    <p class="skill-description">Création de jeux 2D et 3D avec Unity, gestion des systèmes de physique, d'animation et d'interface utilisateur.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">C#</div>
+                    <h3 class="skill-title">Programmation C#</h3>
+                    <p class="skill-description">Développement avec C# pour Unity, architecture de code propre, patterns de conception et optimisation des performances.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">GD</div>
                     <h3 class="skill-title">Game Design</h3>
-                    <p class="skill-description">Level design • Game mechanics • Player psychology • Balancing • Prototyping • User testing • Game flow optimization</p>
+                    <p class="skill-description">Conception de mécaniques de jeu, level design, équilibrage et création d'expériences utilisateur engageantes et intuitives.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3 class="skill-title">Tools & Pipeline</h3>
-                    <p class="skill-description">Git/GitHub • Perforce • JIRA • Trello • Blender • Photoshop • Audio tools • CI/CD • Agile methodology</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3 class="skill-title">Web & Mobile</h3>
-                    <p class="skill-description">WebGL deployment • Mobile optimization • Progressive Web Apps • HTML5 Canvas • Touch controls • Responsive design</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🤝</div>
+                    <div class="skill-icon">CO</div>
                     <h3 class="skill-title">Collaboration</h3>
-                    <p class="skill-description">Team development • Code review • Documentation • Mentoring • Cross-functional communication • Agile workflows</p>
+                    <p class="skill-description">Travail en équipe multidisciplinaire, communication efficace, gestion de versions avec Git et méthodologies agiles.</p>
                 </div>
             </div>
         </div>
@@ -922,111 +783,14 @@
     <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Projets réalisés</h2>
+                <h2 class="section-title">Projets en développement</h2>
                 <p class="section-subtitle">
-                    Une sélection de mes créations les plus abouties, démontrant ma polyvalence technique et créative
+                    Espace dédié à mes futures créations et réalisations académiques
                 </p>
             </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">🏰</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Mystic Realms</h3>
-                            <p class="project-description">
-                                ARPG en 3D avec système de combat dynamique, crafting avancé et monde ouvert. Architecture modulaire permettant l'ajout de contenu extensible. Système de quêtes procédurales et IA comportementale pour NPCs.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unity 3D</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">NavMesh AI</span>
-                            <span class="tech-tag">Scriptable Objects</span>
-                            <span class="tech-tag">Cinemachine</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link primary">Jouer maintenant</a>
-                            <a href="#" class="project-link">Code source</a>
-                            <a href="#" class="project-link">Devlog</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">🚗</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Neon Rush</h3>
-                            <p class="project-description">
-                                Jeu de course futuriste en multijoueur avec physique réaliste et customisation avancée des véhicules. Système de networking robuste et anti-cheat. Interface utilisateur dynamique avec feedback haptique.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unreal Engine 5</span>
-                            <span class="tech-tag">Blueprint</span>
-                            <span class="tech-tag">Multiplayer</span>
-                            <span class="tech-tag">Physics</span>
-                            <span class="tech-tag">UMG</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link primary">Télécharger</a>
-                            <a href="#" class="project-link">Trailer</a>
-                            <a href="#" class="project-link">Documentation</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">👾</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Quantum Platformer</h3>
-                            <p class="project-description">
-                                Platformer 2D innovant avec mécaniques de manipulation temporelle. Système de particules custom et shaders procéduraux. Audio adaptatif basé sur les actions du joueur et état du monde.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unity 2D</span>
-                            <span class="tech-tag">HLSL Shaders</span>
-                            <span class="tech-tag">Timeline</span>
-                            <span class="tech-tag">Audio Mixer</span>
-                            <span class="tech-tag">Pixel Perfect</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link primary">Jouer en ligne</a>
-                            <a href="#" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Post-mortem</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image">🧩</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Mind Maze VR</h3>
-                            <p class="project-description">
-                                Expérience VR immersive combinant puzzle-solving et narration interactive. Système de téléportation optimisé pour réduire la motion sickness. Interactions spatiales intuitives avec retour haptique.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unity XR</span>
-                            <span class="tech-tag">Oculus SDK</span>
-                            <span class="tech-tag">Spatial Audio</span>
-                            <span class="tech-tag">Hand Tracking</span>
-                            <span class="tech-tag">Performance Profiler</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link primary">Démo VR</a>
-                            <a href="#" class="project-link">Making-of</a>
-                            <a href="#" class="project-link">Recherches UX</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="projects-placeholder">
+                <h3>Portfolio de projets à venir</h3>
+                <p>Cette section sera prochainement enrichie avec mes créations, incluant des vidéos de gameplay, des démonstrations techniques et des études de cas détaillées.</p>
             </div>
         </div>
     </section>
@@ -1035,41 +799,53 @@
     <section id="contact" class="contact section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Travaillons ensemble</h2>
+                <h2 class="section-title">Contactez-moi</h2>
                 <p class="section-subtitle">
-                    Prêt à rejoindre votre équipe et contribuer à des projets ambitieux. N'hésitez pas à me contacter pour discuter d'opportunités.
+                    Prêt à rejoindre votre équipe et contribuer à des projets innovants. N'hésitez pas à me contacter pour discuter d'opportunités de stage.
                 </p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-label">Email professionnel</div>
-                        <div class="contact-value">alexandre.dubois@email.com</div>
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">Hatimkadiri1@gmail.com</div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">💼</div>
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
                         <div class="contact-label">LinkedIn</div>
-                        <div class="contact-value">alexandre-dubois-gamedev</div>
+                        <div class="contact-value">www.linkedin.com/in/hatim-ka</div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">🐱</div>
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
                         <div class="contact-label">GitHub</div>
-                        <div class="contact-value">github.com/adubois-gamedev</div>
+                        <div class="contact-value">github.com/Mitah123321</div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">🎮</div>
-                        <div class="contact-label">Portfolio Games</div>
-                        <div class="contact-value">adubois.itch.io</div>
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-label">Localisation</div>
+                        <div class="contact-value">Montréal, Québec</div>
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="mailto:alexandre.dubois@email.com" class="btn btn-primary">
+                    <a href="mailto:Hatimkadiri1@gmail.com" class="btn btn-primary">
                         Envoyer un email
-                        <span>→</span>
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        Télécharger CV
                     </a>
                 </div>
             </div>
@@ -1079,212 +855,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Alexandre Dubois - Game Developer Portfolio. Conçu avec passion pour l'innovation interactive.</p>
+            <p>&copy; 2025 Hatim Kadiri - Game Developer Portfolio.</p>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll behavior
-        const navbar = document.getElementById('navbar');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            // Update active nav link based on scroll position
-            const sections = document.querySelectorAll('section[id]');
-            const scrollPosition = window.scrollY + 100;
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
-                    if (activeLink) activeLink.classList.add('active');
-                }
-            });
-        });
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.skill-card, .project-card, .contact-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Enhanced hover effects
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Skill cards interaction
-        document.querySelectorAll('.skill-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-                this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '';
-            });
-        });
-
-        // Stats counter animation
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            
-            function updateCounter() {
-                start += increment;
-                if (start < target) {
-                    element.textContent = Math.floor(start) + '+';
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = target + '+';
-                }
-            }
-            updateCounter();
-        }
-
-        // Trigger stats animation when in view
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = document.querySelectorAll('.stat-number');
-                    const targets = [8, 3, 5]; // Corresponding to the stats
-                    
-                    statNumbers.forEach((stat, index) => {
-                        animateCounter(stat, targets[index]);
-                    });
-                    
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        const statsSection = document.querySelector('.stats');
-        if (statsSection) {
-            statsObserver.observe(statsSection);
-        }
-
-        // Enhanced button interactions
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                // Create ripple effect
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}px;
-                    top: ${y}px;
-                    background: rgba(255, 255, 255, 0.3);
-                    border-radius: 50%;
-                    transform: scale(0);
-                    animation: ripple 0.6s ease-out;
-                    pointer-events: none;
-                `;
-                
-                this.style.position = 'relative';
-                this.style.overflow = 'hidden';
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-
-        // Add ripple animation to CSS
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(2);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Performance optimization: Debounced scroll handler
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
-        // Enhanced scroll performance
-        const debouncedScrollHandler = debounce(() => {
-            // Additional scroll-based animations can be added here
-        }, 10);
-
-        window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
-
-        // Initialize animations on load
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-            
-            // Trigger initial animations
-            setTimeout(() => {
-                document.querySelectorAll('.fade-in-up').forEach((el, index) => {
-                    setTimeout(() => {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
-            }, 300);
-        });
-    </script>
+        // Navbar scroll
