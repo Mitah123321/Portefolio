@@ -18,10 +18,13 @@
       --accent: #ffd700;
       --bg-primary: #111118;
       --bg-secondary: #1a1a27;
-      --bg-card: rgba(34, 34, 51, 0.75); /* pour glassmorphism, semi‑opaque */
-      --border: rgba(255, 255, 255, 0.08);
       --text-primary: #f0f0f5;
       --text-secondary: #ccccd9;
+      --border: rgba(255, 255, 255, 0.08);
+      /* Pour les cartes / conteneurs semi‑transparents */
+      --bg-card-glass: rgba(34, 34, 51, 0.75);
+      --bg-card-glass-hover: rgba(34, 34, 51, 0.9);
+      --bg-card-container: rgba(34, 34, 51, 0.4);
       --gradient-primary: linear-gradient(135deg, #ff4d4d 0%, #ffd700 100%);
     }
 
@@ -90,7 +93,7 @@
       0%, 100% { transform: translate(0,0) scale(1); }
       25% { transform: translate(50px, -50px) scale(1.1); }
       50% { transform: translate(-30px, 30px) scale(0.9); }
-      75% { transform(30px, -30px) scale(1.05); }
+      75% { transform: translate(30px, -30px) scale(1.05); }
     }
 
     .particles {
@@ -325,17 +328,8 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .section-subtitle {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
 
-    /* Section “À propos” – image gauche, texte droite */
+    /* À propos */
     #about.section {
       display: flex;
       justify-content: center;
@@ -394,9 +388,50 @@
       color: var(--text-primary);
     }
 
-    /* Section Projets avec glassmorphism + cartes plus hautes */
+    /* Compétences techniques (on remet le style des cartes / icônes) */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: rgba(34, 34, 51, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+    }
+    .skill-icon {
+      font-size: 2rem;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+    }
+    .skill-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .skill-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* Projets avec conteneur glassmorphism + cartes semi‑transparentes */
     .projects {
       background: var(--bg-secondary);
+    }
+    .projects-glass-container {
+      background: var(--bg-card-container);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      padding: 2rem 1rem;
+      margin: 0 auto;
     }
     .projects-grid {
       display: grid;
@@ -404,20 +439,19 @@
       gap: 2rem;
     }
     .project-card {
-      /* glassmorphism style */
-      background: var(--bg-card); /* semi transparent */
+      background: var(--bg-card-glass);
       border: 1px solid var(--border);
       border-radius: 16px;
       overflow: hidden;
       transition: transform 0.3s ease, background 0.3s ease;
       display: flex;
       flex-direction: column;
-      min-height: 360px; /* plus d’espace vertical */
+      min-height: 360px;
       backdrop-filter: blur(10px);
     }
     .project-card:hover {
       transform: translateY(-5px);
-      background: rgba(34, 34, 51, 0.95); /* un peu plus opaque au survol */
+      background: var(--bg-card-glass-hover);
       border-color: var(--primary);
     }
     .project-card img {
@@ -479,6 +513,9 @@
       }
       .about-content {
         grid-template-columns: 1fr;
+      }
+      .projects-glass-container {
+        padding: 1.5rem 0.5rem;
       }
       .projects-grid { gap: 1.5rem; }
       .project-card {
@@ -558,7 +595,6 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Compétences techniques</h2>
-          <p class="section-subtitle">Moteurs, langages, design etc.</p>
         </div>
         <div class="skills-grid">
           <div class="skill-card">
@@ -596,25 +632,27 @@
     </section>
 
     <section id="projects" class="projects section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Projets</h2>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="images/projet1.jpg" alt="Projet 1">
-            <div class="project-info">
-              <div class="project-title">Projet 1</div>
-              <div class="project-desc">Description détaillée du projet, les défis, les outils utilisés, les résultats obtenus. Cette carte a plus d’espace vertical pour mieux mettre en valeur le contenu.</div>
-              <div class="project-cta"><a href="#">Voir plus →</a></div>
-            </div>
+      <div class="projects-glass-container">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Projets</h2>
           </div>
-          <div class="project-card">
-            <img src="images/projet2.jpg" alt="Projet 2">
-            <div class="project-info">
-              <div class="project-title">Projet 2</div>
-              <div class="project-desc">Description du deuxième projet avec une perspective plus complète, mettant en valeur les compétences et le rendu visuel.</div>
-              <div class="project-cta"><a href="#">Voir plus →</a></div>
+          <div class="projects-grid">
+            <div class="project-card">
+              <img src="images/projet1.jpg" alt="Projet 1">
+              <div class="project-info">
+                <div class="project-title">Projet 1</div>
+                <div class="project-desc">Description du projet 1, défis, outils, résultats.</div>
+                <div class="project-cta"><a href="#">Voir plus →</a></div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/projet2.jpg" alt="Projet 2">
+              <div class="project-info">
+                <div class="project-title">Projet 2</div>
+                <div class="project-desc">Description du projet 2, ce qu’il apporte.</div>
+                <div class="project-cta"><a href="#">Voir plus →</a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -640,7 +678,7 @@
       particlesContainer.appendChild(p);
     }
 
-    // Navbar scroll effect
+    // Navbar effet scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
@@ -650,7 +688,7 @@
       }
     });
 
-    // Liens nav actifs selon section visible
+    // Activation des liens nav selon section visible
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
     window.addEventListener('scroll', () => {
