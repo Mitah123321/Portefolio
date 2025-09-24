@@ -124,10 +124,10 @@
         transform:translateY(100vh) translateX(0);
         opacity:0;
       }
-      10% {
+      5% {
         opacity:1;
       }
-      90% {
+      95% {
         opacity:1;
       }
       100% {
@@ -881,13 +881,16 @@
       const particle = document.createElement('div');
       particle.className = 'particle';
       particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
+      // Position initiale en bas de l'écran (100vh) au lieu d'une position aléatoire
       particle.style.animationDuration = (15 + Math.random() * 20) + 's';
       particle.style.animationDelay = Math.random() * 10 + 's';
+      particle.style.opacity = '0'; // Commencer invisible
       
       // Ajouter l'animation twinkle à certaines particules
       if(Math.random() > 0.5) {
-        particle.style.animation += ', twinkle ' + (2 + Math.random() * 3) + 's ease-in-out infinite';
+        particle.style.animation = `particle-float ${15 + Math.random() * 20}s linear ${Math.random() * 10}s infinite, twinkle ${2 + Math.random() * 3}s ease-in-out infinite`;
+      } else {
+        particle.style.animation = `particle-float ${15 + Math.random() * 20}s linear ${Math.random() * 10}s infinite`;
       }
       
       particlesContainer.appendChild(particle);
