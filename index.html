@@ -260,8 +260,8 @@
           </ul>
           <div class="nav-contact">
             <a href="mailto:Hatimkadiri1@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/hatim-kadiri-600a42382" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Mitah123321" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hatim-kadiri-600a42382" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Mitah123321" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
           </div>
         </div>
       </div>
@@ -351,7 +351,7 @@
               <h3 class="project-title">Projet 1</h3>
               <p class="project-desc">Description détaillée du projet : objectifs, défis, pipeline (Unreal/Unity), et résultats. Layout transparent pour profiter du fond animé.</p>
               <div class="project-tags"><span class="tag">Unreal</span><span class="tag">C++</span><span class="tag">Gameplay</span></div>
-              <div class="project-links"><a class="project-link" href="#" target="_blank">Repo</a><a class="project-link" href="#" target="_blank">Vidéo</a></div>
+              <div class="project-links"><a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Repo</a><a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Vidéo</a></div>
             </div>
           </article>
 
@@ -363,7 +363,7 @@
               <h3 class="project-title">Projet 2</h3>
               <p class="project-desc">Deuxième projet avec focus technique (optimisation, systèmes d’animation, UI). Le fond et les orbes restent visibles (effet glass léger).</p>
               <div class="project-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">UI/UX</span></div>
-              <div class="project-links"><a class="project-link" href="#" target="_blank">Repo</a><a class="project-link" href="#" target="_blank">Vidéo</a></div>
+              <div class="project-links"><a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Repo</a><a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Vidéo</a></div>
             </div>
           </article>
         </div>
@@ -376,40 +376,46 @@
   </div>
 
   <script>
-    // Particules (restaurées)
-    const particlesContainer = document.getElementById('particles');
-    const NUM = 90; // un peu plus pour un effet vivant
-    for(let i=0;i<NUM;i++){
-      const p=document.createElement('div');
-      p.className='particle';
-      p.style.left=Math.random()*100+'vw';
-      p.style.top=Math.random()*100+'vh';
-      p.style.animationDuration=(6+Math.random()*10)+'s';
-      p.style.animationDelay=(Math.random()*5)+'s';
-      p.style.opacity=(.25+Math.random()*.6).toFixed(2);
-      particlesContainer.appendChild(p);
-    }
+    (() => {
+      const particlesContainer = document.getElementById('particles');
+      if (particlesContainer) {
+        const NUM = 90; // un peu plus pour un effet vivant
+        for (let i = 0; i < NUM; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          particle.style.left = Math.random() * 100 + 'vw';
+          particle.style.top = Math.random() * 100 + 'vh';
+          particle.style.animationDuration = 6 + Math.random() * 10 + 's';
+          particle.style.animationDelay = Math.random() * 5 + 's';
+          particle.style.opacity = (0.25 + Math.random() * 0.6).toFixed(2);
+          particlesContainer.appendChild(particle);
+        }
+      }
 
-    // Navbar scroll shading
-    const navbar=document.getElementById('navbar');
-    window.addEventListener('scroll',()=>{ 
-      if(window.scrollY>60) navbar.classList.add('scrolled'); 
-      else navbar.classList.remove('scrolled');
-    });
+      const navbar = document.getElementById('navbar');
+      const navLinks = [...document.querySelectorAll('.nav-link')];
+      const sections = [...document.querySelectorAll('section[id]')];
 
-    // Lien actif
-    const navLinks=[...document.querySelectorAll('.nav-link')];
-    const sections=[...document.querySelectorAll('section')];
-    window.addEventListener('scroll',()=>{
-      let current='';
-      sections.forEach(sec=>{
-        const top=sec.offsetTop-200;
-        if(window.scrollY>=top) current=sec.id;
-      });
-      navLinks.forEach(l=>{
-        l.classList.toggle('active', l.getAttribute('href')==='#'+current);
-      });
-    });
+      const updateNavbarState = () => {
+        if (navbar) {
+          navbar.classList.toggle('scrolled', window.scrollY > 60);
+        }
+
+        let current = '';
+        sections.forEach((section) => {
+          const top = section.offsetTop - 200;
+          if (window.scrollY >= top) current = section.id;
+        });
+
+        navLinks.forEach((link) => {
+          const targetId = link.getAttribute('href');
+          link.classList.toggle('active', targetId === `#${current}`);
+        });
+      };
+
+      window.addEventListener('scroll', updateNavbarState, { passive: true });
+      updateNavbarState();
+    })();
   </script>
 </body>
 </html>
