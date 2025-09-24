@@ -22,7 +22,6 @@
       --bg-card: #222233;
       --text-primary: #f0f0f5;
       --text-secondary: #ccccd9;
-      --text-muted: #888899;
       --border: rgba(255, 255, 255, 0.08);
       --gradient-primary: linear-gradient(135deg, #ff4d4d 0%, #ffd700 100%);
       --gradient-subtle: linear-gradient(135deg, rgba(255, 77, 77, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
@@ -46,7 +45,6 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Fond animé / orbes */
     .bg-animation {
       position: fixed;
       width: 100%;
@@ -97,7 +95,6 @@
       75% { transform: translate(30px, -30px) scale(1.05); }
     }
 
-    /* Particules */
     .particles {
       position: fixed;
       top: 0;
@@ -133,7 +130,6 @@
       z-index: 1;
     }
 
-    /* Navigation */
     .navbar {
       background: rgba(17, 17, 24, 0.8);
       backdrop-filter: blur(20px);
@@ -190,14 +186,14 @@
       width: 100%;
     }
 
-    /* Hero */
+    /* Hero (inchangé ou peu modifié) */
     .hero {
-      min-height: 90vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 6rem 2rem;
+      padding: 5rem 2rem;
     }
     .hero-container {
       max-width: 800px;
@@ -226,14 +222,8 @@
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
-      }
-      50% {
-        opacity: 0.5;
-        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
-      }
+      0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }
+      50% { opacity: 0.5; box-shadow: 0 0 0 10px rgba(255,215,0,0); }
     }
 
     .hero-title {
@@ -300,55 +290,57 @@
       border-color: rgba(255, 255, 255, 0.3);
     }
 
-    /* Sections — “À propos” centré */
+    /* Sections globales */
     .section {
-      padding: 5rem 1.5rem;
+      padding: 4rem 1.5rem;
       position: relative;
     }
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      text-align: center;
     }
     .section-header {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
+      text-align: center;
     }
     .section-title {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(2rem, 4vw, 3.25rem);
-      margin-bottom: 1rem;
+      margin-bottom: 0.7rem;
       background: var(--gradient-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .section-subtitle {
-      /* on supprime complètement le sous-titre pour “À propos” */
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
     }
 
-    /* Spécifique pour la section about */
+    /* Section “À propos” avec image à gauche, texte à droite */
     #about.section {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
     }
     .about-content {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       align-items: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      gap: 2rem 4rem;
     }
     .profile-card {
-      max-width: 300px;
+      max-width: 280px;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 2rem;
       text-align: center;
+      margin: 0 auto;
     }
     .profile-image {
       width: 140px;
@@ -364,8 +356,8 @@
     }
     .profile-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
     }
     .profile-role,
     .profile-school {
@@ -376,17 +368,17 @@
     .about-text {
       color: var(--text-secondary);
       font-size: 1rem;
-      line-height: 1.7;
+      line-height: 1.6;
       max-width: 600px;
     }
     .about-text p {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
     .about-text strong {
       color: var(--text-primary);
     }
 
-    /* Skills */
+    /* Skills, Projects, Contact (inchangés ou avec petits ajustements) */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -419,7 +411,6 @@
       line-height: 1.4;
     }
 
-    /* Projects */
     .projects {
       background: var(--bg-secondary);
     }
@@ -462,7 +453,6 @@
       line-height: 1.4;
     }
 
-    /* Contact */
     .contact {
       background: var(--bg-primary);
     }
@@ -495,7 +485,6 @@
       font-weight: 600;
     }
 
-    /* Footer */
     .footer {
       background: var(--bg-secondary);
       border-top: 1px solid var(--border);
@@ -511,6 +500,9 @@
       .nav-container { padding: 0.8rem 1rem; }
       .section { padding: 3rem 1rem; }
       .hero { padding: 4rem 1rem; }
+      .about-content {
+        grid-template-columns: 1fr;
+      }
       .projects-grid { gap: 1rem; }
       .skills-grid { gap: 1rem; }
     }
@@ -668,7 +660,7 @@
     </section>
 
     <footer class="footer">
-      <div class="footer-content">&copy; 2025 Hatim Kadiri — Portefeuille amélioré.</div>
+      <div class="footer-content">&copy; 2025 Hatim Kadiri — Portfolio amélioré</div>
     </footer>
   </div>
 
@@ -686,7 +678,7 @@
       particlesContainer.appendChild(p);
     }
 
-    // Navbar scroll
+    // Navbar effet scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
@@ -696,7 +688,7 @@
       }
     });
 
-    // Activation des liens nav selon section visible
+    // Liens nav actifs selon section visible
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
     window.addEventListener('scroll', () => {
