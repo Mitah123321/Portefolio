@@ -47,7 +47,7 @@
             position: relative;
         }
 
-        /* Animated Background - Plus visible */
+        /* Animated Background */
         .bg-animation {
             position: fixed;
             width: 100%;
@@ -111,7 +111,7 @@
             }
         }
 
-        /* Particles Effect */
+        /* Particles */
         .particles {
             position: fixed;
             top: 0;
@@ -148,7 +148,7 @@
             }
         }
 
-        /* Main Content Wrapper */
+        /* Main Content */
         .main-wrapper {
             position: relative;
             z-index: 1;
@@ -270,11 +270,11 @@
         }
 
         @keyframes pulse {
-            0%, 100% { 
+            0%, 100% {
                 opacity: 1;
                 box-shadow: 0 0 0 0 rgba(0, 191, 166, 0.4);
             }
-            50% { 
+            50% {
                 opacity: 0.5;
                 box-shadow: 0 0 0 10px rgba(0, 191, 166, 0);
             }
@@ -354,7 +354,7 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
 
-        /* Section Styles */
+        /* Sections générales */
         .section {
             padding: 7rem 2rem;
             position: relative;
@@ -426,8 +426,8 @@
         }
 
         .profile-image {
-            width: 100px;
-            height: 100px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             background: var(--gradient-primary);
             margin: 0 auto 1.5rem;
@@ -442,7 +442,6 @@
             position: relative;
         }
 
-        /* Pour l'image de profil */
         .profile-image img {
             width: 100%;
             height: 100%;
@@ -526,16 +525,16 @@
         .skill-icon {
             width: 3.5rem;
             height: 3.5rem;
-            background: var(--gradient-subtle);
-            border: 1px solid rgba(94, 114, 228, 0.2);
-            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-light);
             margin-bottom: 1.5rem;
+        }
+
+        .skill-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .skill-title {
@@ -555,7 +554,7 @@
         .projects {
             background: var(--bg-secondary);
         }
-        
+
         .projects-placeholder {
             text-align: center;
             padding: 5rem 3rem;
@@ -654,13 +653,13 @@
             font-size: 0.875rem;
         }
 
-        /* Responsive Design - Amélioré pour mobile */
+        /* Responsive Adjustments */
         @media (max-width: 1024px) {
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            
+
             .profile-card {
                 position: static;
                 max-width: 400px;
@@ -669,7 +668,6 @@
         }
 
         @media (max-width: 768px) {
-            /* Navigation mobile */
             .navbar {
                 padding: 0;
             }
@@ -677,7 +675,7 @@
             .nav-container {
                 padding: 1rem 1.5rem;
             }
-            
+
             .nav-menu {
                 gap: 0.5rem;
                 font-size: 0.85rem;
@@ -688,12 +686,10 @@
                 padding: 0.4rem 0.6rem;
             }
 
-            /* Masquer le bouton CV sur mobile */
             .nav-menu li:last-child {
                 display: none;
             }
 
-            /* Hero mobile */
             .hero {
                 padding: 6rem 1.5rem 3rem;
                 min-height: calc(100vh - 60px);
@@ -713,8 +709,7 @@
                 font-size: 0.8rem;
                 padding: 0.5rem 1rem;
             }
-            
-            /* Sections mobile */
+
             .section {
                 padding: 4rem 1.5rem;
             }
@@ -728,7 +723,6 @@
                 font-size: 1rem;
             }
 
-            /* About mobile */
             .about-text {
                 font-size: 1rem;
             }
@@ -737,7 +731,6 @@
                 padding: 2rem;
             }
 
-            /* Skills mobile */
             .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -747,7 +740,6 @@
                 padding: 2rem;
             }
 
-            /* Contact mobile */
             .contact-info {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
@@ -766,14 +758,13 @@
             .contact-label {
                 font-size: 0.85rem;
             }
-            
-            /* Boutons mobile */
+
             .hero-cta {
                 flex-direction: column;
                 align-items: stretch;
                 gap: 1rem;
             }
-            
+
             .btn {
                 text-align: center;
                 justify-content: center;
@@ -781,7 +772,6 @@
                 font-size: 0.9rem;
             }
 
-            /* Animations background mobile */
             .gradient-orb:nth-child(1) {
                 width: 300px;
                 height: 300px;
@@ -797,13 +787,11 @@
                 height: 200px;
             }
 
-            /* Réduire les particules sur mobile */
             .particle {
                 width: 1px;
                 height: 1px;
             }
 
-            /* Footer mobile */
             .footer {
                 padding: 2rem 1.5rem;
             }
@@ -813,7 +801,6 @@
             }
         }
 
-        /* Très petits écrans */
         @media (max-width: 380px) {
             .nav-menu {
                 gap: 0.3rem;
@@ -867,8 +854,6 @@
         <div class="gradient-orb"></div>
         <div class="gradient-orb"></div>
     </div>
-    
-    <!-- Particles -->
     <div class="particles" id="particles"></div>
 
     <div class="main-wrapper">
@@ -895,15 +880,11 @@
                     <span class="gradient-text">Game Developer</span>
                 </h1>
                 <p class="hero-subtitle fade-in-up delay-200">
-                    Étudiant en Game Development au Collège LaSalle Montréal, passionné par la création d'expériences interactives innovantes et l'exploration des technologies émergentes du jeu vidéo.
+                    Étudiant en Game Development au Collège LaSalle Montréal, passionné par la création d’expériences interactives innovantes et l’exploration des technologies émergentes du jeu vidéo.
                 </p>
                 <div class="hero-cta fade-in-up delay-300">
-                    <a href="#skills" class="btn btn-primary">
-                        Découvrir mes compétences
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        Me contacter
-                    </a>
+                    <a href="#skills" class="btn btn-primary">Découvrir mes compétences</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
                 </div>
             </div>
         </section>
@@ -913,15 +894,12 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">À propos de moi</h2>
-                    <p class="section-subtitle">
-                        Découvrez mon parcours académique et ma passion pour le développement de jeux
-                    </p>
+                    <p class="section-subtitle">Découvrez mon parcours académique et ma passion pour le développement de jeux</p>
                 </div>
                 <div class="about-content">
                     <div class="profile-card">
                         <div class="profile-image">
-                            <!-- Remplacez le texte HK par votre photo -->
-                            <img src="Moi.png" alt="Hatim Kadiri"> 
+                            <img src="Moi.png" alt="Hatim Kadiri">
                         </div>
                         <h3 class="profile-name">Hatim Kadiri</h3>
                         <p class="profile-role">Game Developer Student</p>
@@ -929,16 +907,16 @@
                     </div>
                     <div class="about-text">
                         <p>
-                            Actuellement étudiant en <strong>Game Development au Collège LaSalle de Montréal</strong>, je me spécialise dans la création d'expériences ludiques immersives qui repoussent les limites de l'interactivité et de la narration.
+                            Actuellement étudiant en <strong>Game Development au Collège LaSalle de Montréal</strong>, je me spécialise dans la création d’expériences ludiques immersives qui repoussent les limites de l’interactivité et de la narration.
                         </p>
                         <p>
-                            Ma formation me permet de maîtriser les <strong>outils de développement modernes</strong> tout en développant une compréhension approfondie des mécaniques de jeu, de l'expérience utilisateur et des pipelines de production professionnels.
+                            Ma formation me permet de maîtriser les <strong>outils de développement modernes</strong> tout en développant une compréhension approfondie des mécaniques de jeu, de l’expérience utilisateur et des pipelines de production professionnels.
                         </p>
                         <p>
-                            Je recherche un <strong>stage enrichissant</strong> qui me permettra d'appliquer mes connaissances techniques dans un environnement professionnel, d'apprendre auprès d'experts de l'industrie et de contribuer à des projets innovants.
+                            Je recherche un <strong>stage enrichissant</strong> qui me permettra d’appliquer mes connaissances techniques dans un environnement professionnel, d’apprendre auprès d'experts de l’industrie et de contribuer à des projets innovants.
                         </p>
                         <p>
-                            Mon approche combine <strong>rigueur technique et créativité</strong>, avec un focus particulier sur l'optimisation des performances, la qualité du code et l'expérience utilisateur.
+                            Mon approche combine <strong>rigueur technique et créativité</strong>, avec un focus particulier sur l’optimisation des performances, la qualité du code et l’expérience utilisateur.
                         </p>
                     </div>
                 </div>
@@ -950,38 +928,48 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Expertise technique</h2>
-                    <p class="section-subtitle">
-                        Maîtrise des technologies essentielles au développement de jeux modernes
-                    </p>
+                    <p class="section-subtitle">Maîtrise des technologies essentielles au développement de jeux modernes</p>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <div class="skill-icon">UE</div>
+                        <div class="skill-icon">
+                            <img src="icons/unreal-engine.svg" alt="Unreal Engine">
+                        </div>
                         <h3 class="skill-title">Unreal Engine</h3>
-                        <p class="skill-description">Développement avec Unreal Engine 5, maîtrise du système Blueprint pour le prototypage rapide et l'implémentation de logiques complexes.</p>
+                        <p class="skill-description">Développement avec Unreal Engine 5, maîtrise du système Blueprint pour le prototypage rapide et l’implémentation de logiques complexes.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">C++</div>
-                        <h3 class="skill-title">Programmation C++</h3>
+                        <div class="skill-icon">
+                            <img src="icons/cpp.svg" alt="C++">
+                        </div>
+                        <h3 class="skill-title">C++</h3>
                         <p class="skill-description">Développement natif en C++ pour les performances critiques, programmation orientée objet et intégration avec les moteurs de jeu.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">U3D</div>
+                        <div class="skill-icon">
+                            <img src="icons/unity.svg" alt="Unity 3D">
+                        </div>
                         <h3 class="skill-title">Unity 3D</h3>
-                        <p class="skill-description">Création de jeux 2D et 3D avec Unity, gestion des systèmes de physique, d'animation et d'interface utilisateur.</p>
+                        <p class="skill-description">Création de jeux 2D et 3D avec Unity, gestion des systèmes de physique, d’animation et d’interface utilisateur.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">C#</div>
-                        <h3 class="skill-title">Programmation C#</h3>
+                        <div class="skill-icon">
+                            <img src="icons/csharp.svg" alt="C#">
+                        </div>
+                        <h3 class="skill-title">C#</h3>
                         <p class="skill-description">Développement avec C# pour Unity, architecture de code propre, patterns de conception et optimisation des performances.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">GD</div>
+                        <div class="skill-icon">
+                            <img src="icons/game-design.svg" alt="Game Design">
+                        </div>
                         <h3 class="skill-title">Game Design</h3>
-                        <p class="skill-description">Conception de mécaniques de jeu, level design, équilibrage et création d'expériences utilisateur engageantes.</p>
+                        <p class="skill-description">Conception de mécaniques de jeu, level design, équilibrage et création d’expériences utilisateur engageantes.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">CO</div>
+                        <div class="skill-icon">
+                            <img src="icons/collaboration.svg" alt="Collaboration">
+                        </div>
                         <h3 class="skill-title">Collaboration</h3>
                         <p class="skill-description">Travail en équipe multidisciplinaire, communication efficace, gestion de versions avec Git et méthodologies agiles.</p>
                     </div>
@@ -994,72 +982,93 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Projets en développement</h2>
-                    <p class="section-subtitle">
-                        Espace dédié à mes futures créations et réalisations académiques
+                    <p class="section-subtitle">Espace dédié à mes futures créations et réalisations académiques</p>
+                </div>
+                <div class="projects-placeholder">
+                    <h3>Bientôt ici !</h3>
+                    <p>Les projets seront affichés dès qu’ils seront prêts.</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contactez-moi</h2>
-                <p class="section-subtitle">
-                    Prêt à rejoindre votre équipe et contribuer à des projets innovants. N'hésitez pas à me contacter pour discuter d'opportunités de stage.
-                </p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </div>
-                        <div class="contact-label">Email</div>
-                        <div class="contact-value">Hatimkadiri1@gmail.com</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </div>
-                        <div class="contact-label">LinkedIn</div>
-                        <div class="contact-value">hatim-kadiri-600a42382</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </div>
-                        <div class="contact-label">GitHub</div>
-                        <div class="contact-value">github.com/Mitah123321</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                        </div>
-                        <div class="contact-label">Localisation</div>
-                        <div class="contact-value">Montréal, Québec</div>
-                    </div>
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contactez-moi</h2>
+                    <p class="section-subtitle">Prêt à rejoindre votre équipe et contribuer à des projets innovants ? N’hésitez pas à me contacter pour discuter d’opportunités de stage.</p>
                 </div>
-                <div class="hero-cta">
-                    <a href="mailto:Hatimkadiri1@gmail.com" class="btn btn-primary">
-                        Envoyer un email
+                <div class="contact-info">
+                    <a href="mailto:Hatimkadiri1@gmail.com" class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-label">Email</div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hatim-kadiri-600a42382" target="_blank" class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-label">LinkedIn</div>
+                    </a>
+                    <a href="https://github.com/Mitah123321" target="_blank" class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div class="contact-label">GitHub</div>
+                    </a>
+                    <a href="https://www.google.com/maps/place/Montréal,+Québec" target="_blank" class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-label">Montréal, QC</div>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Hatim Kadiri - Game Developer Portfolio. Développé avec passion pour l'innovation interactive.</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Hatim Kadiri - Game Developer Portfolio. Développé avec passion pour l’innovation interactive.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Script pour les particules (optionnel, si tu avais déjà un script)
+        const particlesContainer = document.getElementById('particles');
+        const numParticles = 100;
+        for (let i = 0; i < numParticles; i++) {
+            const p = document.createElement('div');
+            p.classList.add('particle');
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.top = Math.random() * 100 + 'vh';
+            p.style.animationDuration = (5 + Math.random() * 10) + 's';
+            p.style.animationDelay = Math.random() * 5 + 's';
+            particlesContainer.appendChild(p);
+        }
+
+        // Script pour changer le style de la navbar au scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Active le lien de navigation selon la section visible (optionnel)
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                const sectionTop = sec.offsetTop - 200;
+                if (window.scrollY >= sectionTop) {
+                    current = sec.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
