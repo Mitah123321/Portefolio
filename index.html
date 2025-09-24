@@ -303,7 +303,7 @@
       border-color: rgba(255, 255, 255, 0.3);
     }
 
-    /* Section globale */
+    /* Sections */
     .section {
       padding: 4rem 1.5rem;
       position: relative;
@@ -340,8 +340,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
     }
     .about-content {
       display: grid;
@@ -394,7 +394,7 @@
       color: var(--text-primary);
     }
 
-    /* Skills, Projects, Contact ajustements */
+    /* Skills, Projects */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -473,7 +473,6 @@
       background: var(--bg-primary);
     }
     .contact-info {
-      /* on peut éventuellement cacher ou garder mais ce n’est plus la position principale */
       display: none;
     }
 
@@ -502,7 +501,7 @@
       .projects-grid { gap: 1rem; }
       .skills-grid { gap: 1rem; }
       .nav-contact {
-        display: none; /* cacher les icônes contact sur mobile pour simplifier */
+        display: none;
       }
     }
   </style>
@@ -525,7 +524,6 @@
             <li><a href="#about" class="nav-link">À propos</a></li>
             <li><a href="#skills" class="nav-link">Compétences</a></li>
             <li><a href="#projects" class="nav-link">Projets</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
           <div class="nav-contact">
             <a href="mailto:Hatimkadiri1@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -647,7 +645,6 @@
           <h2 class="section-title">Contactez-moi</h2>
           <p class="section-subtitle">Disponible pour stage, collaboration ou discussion.</p>
         </div>
-        <!-- on cache la section-contact classique, les icônes sont en haut -->
         <div class="contact-info"></div>
       </div>
     </section>
