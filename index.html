@@ -873,28 +873,43 @@
   </div>
 
   <script>
-    // Particules améliorées avec twinkle
+    // Particules améliorées - génération continue
     const particlesContainer = document.getElementById('particles');
-    const NUM_PARTICLES = 100;
+    const INITIAL_PARTICLES = 60;
+    const PARTICLE_RATE = 2000; // Nouvelle particule toutes les 2 secondes
     
-    for(let i = 0; i < NUM_PARTICLES; i++){
+    function createParticle(delay = 0) {
       const particle = document.createElement('div');
       particle.className = 'particle';
       particle.style.left = Math.random() * 100 + '%';
-      // Position initiale en bas de l'écran (100vh) au lieu d'une position aléatoire
-      particle.style.animationDuration = (15 + Math.random() * 20) + 's';
-      particle.style.animationDelay = Math.random() * 10 + 's';
-      particle.style.opacity = '0'; // Commencer invisible
       
-      // Ajouter l'animation twinkle à certaines particules
+      const duration = 15 + Math.random() * 20;
+      particle.style.opacity = '0';
+      
+      // Animation principale
       if(Math.random() > 0.5) {
-        particle.style.animation = `particle-float ${15 + Math.random() * 20}s linear ${Math.random() * 10}s infinite, twinkle ${2 + Math.random() * 3}s ease-in-out infinite`;
+        particle.style.animation = `particle-float ${duration}s linear ${delay}s infinite, twinkle ${2 + Math.random() * 3}s ease-in-out infinite`;
       } else {
-        particle.style.animation = `particle-float ${15 + Math.random() * 20}s linear ${Math.random() * 10}s infinite`;
+        particle.style.animation = `particle-float ${duration}s linear ${delay}s infinite`;
       }
       
       particlesContainer.appendChild(particle);
+      
+      // Nettoyer les vieilles particules pour éviter l'accumulation
+      if(particlesContainer.children.length > 150) {
+        particlesContainer.removeChild(particlesContainer.firstChild);
+      }
     }
+    
+    // Créer les particules initiales avec des délais variés
+    for(let i = 0; i < INITIAL_PARTICLES; i++){
+      createParticle(Math.random() * 15);
+    }
+    
+    // Générer continuellement de nouvelles particules
+    setInterval(() => {
+      createParticle(0);
+    }, PARTICLE_RATE);
 
     // Navbar scroll effect amélioré
     const navbar = document.getElementById('navbar');
@@ -933,6 +948,16 @@
           });
         }
       });
+      
+      // Cas spécial pour la section home au tout début
+      if(window.scrollY < 50) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if(link.getAttribute('href') === '#home') {
+            link.classList.add('active');
+          }
+        });
+      }
     }
     
     window.addEventListener('scroll', updateActiveNav);
