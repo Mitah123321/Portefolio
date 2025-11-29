@@ -4,61 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Hatim Kadiri</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="vignette"></div>
+
     <nav>
         <div class="logo">HATIM KADIRI.</div>
         <ul class="nav-links">
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#skills">Stack Technique</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="mailto:HatimKadiri1@gmail.com" class="cta-small">Me Contacter</a></li>
+            <li><a href="#projects">Travaux</a></li>
+            <li><a href="#skills">Stack</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="mailto:HatimKadiri1@gmail.com" class="cta-outline">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <span class="tag">DÉVELOPPEUR GAMEPLAY</span>
-            <h1>
-                Créer des Mondes<br>
-                Immersifs<span class="accent">.</span>
-            </h1>
-            <p class="subtitle">
-                Étudiant au <strong>Collège LaSalle</strong>. Spécialisé en C++/C#, Unreal Engine 5 & Unity.
-                <br><br>
-                <span style="color: #EAEAEA; border-bottom: 1px solid var(--accent-color);">
-                    À la recherche d'un stage pour Mai 2026.
-                </span>
-            </p>
+        <div class="container hero-content">
+            <div class="tag-wrapper">
+                <span class="tag">GAMEPLAY PROGRAMMER</span>
+            </div>
             
+            <h1>
+                The Architect<br>
+                of Gameplay<span class="accent">.</span>
+            </h1>
+            
+            <div class="subtitle-box">
+                <p>
+                    Étudiant au <strong>Collège LaSalle</strong>.
+                    <br>Expertise en <span class="white">Unreal Engine 5</span>, <span class="white">Unity</span> & <span class="white">C++</span>.
+                </p>
+                <div class="status-indicator">
+                    <span class="dot"></span>
+                    Recherche stage pour Mai 2026
+                </div>
+            </div>
+
             <div class="location-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 BASÉ À MONTRÉAL
             </div>
         </div>
     </header>
 
-    <section id="skills" style="padding: 4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <section id="skills" class="skills-section">
         <div class="container">
-            <div style="display: flex; gap: 4rem; flex-wrap: wrap;">
-                <div>
-                    <h4 style="font-family: var(--font-serif); margin-bottom: 1rem; color: var(--accent-color);">Moteurs</h4>
-                    <ul style="color: var(--text-muted);">
+            <div class="grid-layout">
+                <div class="grid-item">
+                    <h3>Moteurs</h3>
+                    <ul>
                         <li>Unreal Engine 5</li>
                         <li>Unity 3D</li>
                     </ul>
                 </div>
-                <div>
-                    <h4 style="font-family: var(--font-serif); margin-bottom: 1rem; color: var(--accent-color);">Langages</h4>
-                    <ul style="color: var(--text-muted);">
-                        <li>C++</li>
+                <div class="grid-item">
+                    <h3>Langages</h3>
+                    <ul>
+                        <li>C++ (Avancé)</li>
                         <li>C#</li>
-                        <li>Blueprints (Visual Scripting)</li>
+                        <li>Blueprints</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3>Outils</h3>
+                    <ul>
+                        <li>Git / Perforce</li>
+                        <li>Visual Studio</li>
+                        <li>Jira</li>
                     </ul>
                 </div>
             </div>
@@ -67,51 +86,39 @@
 
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Sélection de Projets</h2>
+            <h2 class="section-heading">Sélection de Projets</h2>
             
-            <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80');"></div>
-                    <div class="project-info">
-                        <span class="project-tech">UNREAL ENGINE 5 • BLUEPRINTS</span>
-                        <h3>Nom du Projet Unreal</h3>
-                        <p>Description courte de ce que tu as fait (ex: Système de combat dynamique).</p>
-                        <a href="#" class="link-arrow">Voir le projet &rarr;</a>
+            <div class="projects-grid">
+                <a href="#" class="project-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80');"></div>
+                    <div class="card-content">
+                        <span class="tech-tag">UNREAL ENGINE 5</span>
+                        <h4>Project Titan</h4>
+                        <p>Système de combat modulaire en C++.</p>
                     </div>
-                </article>
+                </a>
 
-                <article class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1614726365723-49bf3e9365ac?auto=format&fit=crop&q=80');"></div>
-                    <div class="project-info">
-                        <span class="project-tech">UNITY • C#</span>
-                        <h3>Nom du Projet Unity</h3>
-                        <p>Description technique (ex: Génération procédurale de terrain).</p>
-                        <a href="#" class="link-arrow">Voir le projet &rarr;</a>
+                <a href="#" class="project-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&q=80');"></div>
+                    <div class="card-content">
+                        <span class="tech-tag">UNITY • C#</span>
+                        <h4>Neon Dash</h4>
+                        <p>Platformer 2.5D avec physique custom.</p>
                     </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1642425149556-b6f90e946859?auto=format&fit=crop&q=80');"></div>
-                    <div class="project-info">
-                        <span class="project-tech">C++ • ALGORITHMIE</span>
-                        <h3>Système Custom</h3>
-                        <p>Un projet purement code ou un outil créé pour les designers.</p>
-                        <a href="#" class="link-arrow">Voir le code &rarr;</a>
+                </a>
+                
+                 <a href="#" class="project-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80');"></div>
+                    <div class="card-content">
+                        <span class="tech-tag">C++ • OPENGL</span>
+                        <h4>Moteur 3D</h4>
+                        <p>Création d'un moteur de rendu from scratch.</p>
                     </div>
-                </article>
+                </a>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2024 Hatim Kadiri. Tous droits réservés.</p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/hatim-kadiri-600a42382/" target="_blank">LinkedIn</a>
-                <a href="mailto:HatimKadiri1@gmail.com">Email</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <div class="container footer-flex">
+            <div class="left">
