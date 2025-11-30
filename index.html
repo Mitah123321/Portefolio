@@ -1,200 +1,83 @@
-:root {
-    --bg-color: #050505;
-    --text-white: #ffffff;
-    --text-grey: #888888;
-    --accent-pink: #D4A5B7; /* La couleur exacte */
-    --grid-line: rgba(255, 255, 255, 0.04);
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatim Kadiri | Gameplay Programmer</title>
     
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Inter', sans-serif;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-white);
-    font-family: var(--font-sans);
-    overflow-x: hidden;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
-    /* GRILLE PARFAITE (Méthode SVG) */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M100 0v100H0' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: 100px 100px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-ul { list-style: none; }
+    <nav>
+        <div class="nav-left">
+            <span class="logo-name">Hatim<br>Kadiri<span class="trademark">™</span></span>
+        </div>
+        <div class="nav-right">
+            <ul class="menu">
+                <li><a href="#projects">PROJETS</a></li>
+                <li><a href="#stack">STACK</a></li>
+                <li><a href="#about">À PROPOS</a></li>
+                <li><a href="mailto:HatimKadiri1@gmail.com" class="btn-contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
 
-/* --- NAV BAR --- */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 3rem 4rem;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
+    <section class="hero-screen">
+        
+        <div class="hero-main">
+            <div class="tag-box">
+                GAMEPLAY PROGRAMMER
+            </div>
+            
+            <h1>
+                The Architect<br>
+                of Gameplay<span class="accent">.</span>
+            </h1>
+            
+            <div class="hero-description">
+                <p>
+                    Étudiant au <strong>Collège LaSalle</strong> à Montréal.<br>
+                    Expertise en C++, Unreal Engine 5 & Unity.
+                </p>
+                <p class="highlight-text">
+                    Recherche stage pour Mai 2026.
+                </p>
+            </div>
 
-.logo-name {
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -1px;
-}
+            <div class="location-pill">
+                <div class="pin-icon">
+                    <div class="pin-inner"></div>
+                </div>
+                BASED IN MONTREAL
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">↓</div>
 
-.trademark {
-    font-size: 0.6rem;
-    font-family: var(--font-sans);
-    vertical-align: super;
-    margin-left: 2px;
-}
+    </section>
 
-.menu {
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
-}
+    <section id="projects" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Selected Works</h2>
+            <div class="grid-projects">
+                <div class="project-card">
+                    <div class="p-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800');"></div>
+                    <h3>Project Nebula</h3>
+                    <p>Unreal Engine 5 • C++</p>
+                </div>
+                <div class="project-card">
+                    <div class="p-image" style="background-image: url('https://images.unsplash.com/photo-1614726365723-49bf3e9365ac?q=80&w=800');"></div>
+                    <h3>Echoes</h3>
+                    <p>Unity • C#</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.menu a {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--text-grey);
-    text-transform: uppercase;
-}
-
-.menu a:hover { color: var(--text-white); }
-
-.btn-contact {
-    border: 1px solid var(--text-grey);
-    padding: 8px 18px;
-    border-radius: 50px;
-}
-.btn-contact:hover { border-color: var(--text-white); background: rgba(255,255,255,0.05); }
-
-
-/* --- HERO SCREEN --- */
-.hero-screen {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 4rem;
-}
-
-/* Bloc Gauche */
-.hero-main {
-    max-width: 800px;
-    /* On laisse le navigateur centrer verticalement grâce au flex de .hero-screen */
-}
-
-.tag-box {
-    display: inline-block;
-    border: 1px solid var(--accent-pink);
-    color: var(--text-white);
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    padding: 6px 10px;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-h1 {
-    font-family: var(--font-serif);
-    font-size: 5.5rem;
-    line-height: 0.95;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    letter-spacing: -2px;
-}
-
-.accent { color: var(--accent-pink); }
-
-.hero-description {
-    border-left: 1px solid #333;
-    padding-left: 1.5rem;
-    margin-bottom: 3rem;
-    color: var(--text-grey);
-    font-size: 1.1rem;
-    line-height: 1.5;
-    max-width: 450px;
-}
-
-.hero-description strong { color: var(--text-white); font-weight: 500; }
-.highlight-text { margin-top: 1rem; color: var(--text-white); border-bottom: 1px solid var(--accent-pink); display: inline-block; padding-bottom: 2px; }
-
-/* Badge Localisation */
-.location-pill {
-    display: inline-flex;
-    align-items: center;
-    background: #111;
-    border: 1px solid #222;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--text-grey);
-    margin-top: 1rem;
-}
-
-.pin-icon {
-    width: 14px; height: 14px;
-    background: rgba(212, 165, 183, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-.pin-inner { width: 6px; height: 6px; background: var(--accent-pink); border-radius: 50%; }
-
-/* WIDGET PHOTO CSS SUPPRIMÉ ICI */
-
-/* Flèche scroll centre */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #333;
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
-    40% {transform: translateX(-50%) translateY(-10px);}
-    60% {transform: translateX(-50%) translateY(-5px);}
-}
-
-
-/* --- SECTION SUIVANTE --- */
-.content-section {
-    padding: 6rem 4rem;
-    background: var(--bg-color);
-    border-top: 1px solid var(--grid-line);
-}
-.section-title { font-family: var(--font-serif); font-size: 3rem; margin-bottom: 3rem; }
-.grid-projects { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.project-card h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-top: 1rem; }
-.project-card p { color: var(--text-grey); font-size: 0.9rem; }
-.p-image { height: 300px; background-size: cover; background-position: center; filter: grayscale(100%); transition: 0.3s; }
-.project-card:hover .p-image { filter: grayscale(0%); }
-
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 900px) {
-    nav { padding: 2rem; flex-direction: column; gap: 1rem; position: relative; }
-    .hero-screen { flex-direction: column; height: auto; padding: 4rem 2rem; align-items: flex-start; }
-    h1 { font-size: 3.5rem; }
-    /* Suppression des règles mobiles pour le widget puisqu'il n'existe plus */
-    .scroll-indicator { display: none; }
-    .grid-projects { grid-template-columns: 1fr; }
-}
+</body>
+</html>
