@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Hatim Kadiri</title>
+    <title>Hatim Kadiri | Gameplay Programmer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="vignette"></div>
-
     <nav>
-        <div class="logo">HATIM KADIRI.</div>
-        <ul class="nav-links">
-            <li><a href="#projects">Travaux</a></li>
-            <li><a href="#skills">Stack</a></li>
-            <li><a href="#about">À Propos</a></li>
-            <li><a href="mailto:HatimKadiri1@gmail.com" class="cta-outline">Contact</a></li>
-        </ul>
+        <div class="nav-left">
+            <span class="logo-name">Hatim<br>Kadiri<span class="trademark">™</span></span>
+        </div>
+        <div class="nav-right">
+            <ul class="menu">
+                <li><a href="#projects">PROJETS</a></li>
+                <li><a href="#stack">STACK</a></li>
+                <li><a href="#about">À PROPOS</a></li>
+                <li><a href="mailto:HatimKadiri1@gmail.com" class="btn-contact">CONTACT</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="tag-wrapper">
-                <span class="tag">GAMEPLAY PROGRAMMER</span>
+    <section class="hero-screen">
+        
+        <div class="hero-main">
+            <div class="tag-box">
+                GAMEPLAY PROGRAMMER
             </div>
             
             <h1>
@@ -36,89 +39,59 @@
                 of Gameplay<span class="accent">.</span>
             </h1>
             
-            <div class="subtitle-box">
+            <div class="hero-description">
                 <p>
-                    Étudiant au <strong>Collège LaSalle</strong>.
-                    <br>Expertise en <span class="white">Unreal Engine 5</span>, <span class="white">Unity</span> & <span class="white">C++</span>.
+                    Étudiant au <strong>Collège LaSalle</strong> à Montréal.<br>
+                    Expertise en C++, Unreal Engine 5 & Unity.
                 </p>
-                <div class="status-indicator">
-                    <span class="dot"></span>
-                    Recherche stage pour Mai 2026
-                </div>
+                <p class="highlight-text">
+                    Recherche stage pour Mai 2026.
+                </p>
             </div>
 
-            <div class="location-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                BASÉ À MONTRÉAL
+            <div class="location-pill">
+                <div class="pin-icon">
+                    <div class="pin-inner"></div>
+                </div>
+                BASED IN MONTREAL
             </div>
         </div>
-    </header>
 
-    <section id="skills" class="skills-section">
+        <div class="hero-widget">
+            <div class="widget-frame">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300&h=400" alt="Hatim Kadiri">
+                <div class="widget-overlay"></div>
+            </div>
+            <div class="widget-status">
+                <span class="status-label">CURRENT STATUS</span>
+                <div class="status-live">
+                    <span class="green-dot"></span>
+                    Coding on Unreal Engine
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">↓</div>
+
+    </section>
+
+    <section id="projects" class="content-section">
         <div class="container">
-            <div class="grid-layout">
-                <div class="grid-item">
-                    <h3>Moteurs</h3>
-                    <ul>
-                        <li>Unreal Engine 5</li>
-                        <li>Unity 3D</li>
-                    </ul>
+            <h2 class="section-title">Selected Works</h2>
+            <div class="grid-projects">
+                <div class="project-card">
+                    <div class="p-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800');"></div>
+                    <h3>Project Nebula</h3>
+                    <p>Unreal Engine 5 • C++</p>
                 </div>
-                <div class="grid-item">
-                    <h3>Langages</h3>
-                    <ul>
-                        <li>C++ (Avancé)</li>
-                        <li>C#</li>
-                        <li>Blueprints</li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <h3>Outils</h3>
-                    <ul>
-                        <li>Git / Perforce</li>
-                        <li>Visual Studio</li>
-                        <li>Jira</li>
-                    </ul>
+                <div class="project-card">
+                    <div class="p-image" style="background-image: url('https://images.unsplash.com/photo-1614726365723-49bf3e9365ac?q=80&w=800');"></div>
+                    <h3>Echoes</h3>
+                    <p>Unity • C#</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-heading">Sélection de Projets</h2>
-            
-            <div class="projects-grid">
-                <a href="#" class="project-card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80');"></div>
-                    <div class="card-content">
-                        <span class="tech-tag">UNREAL ENGINE 5</span>
-                        <h4>Project Titan</h4>
-                        <p>Système de combat modulaire en C++.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="project-card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&q=80');"></div>
-                    <div class="card-content">
-                        <span class="tech-tag">UNITY • C#</span>
-                        <h4>Neon Dash</h4>
-                        <p>Platformer 2.5D avec physique custom.</p>
-                    </div>
-                </a>
-                
-                 <a href="#" class="project-card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80');"></div>
-                    <div class="card-content">
-                        <span class="tech-tag">C++ • OPENGL</span>
-                        <h4>Moteur 3D</h4>
-                        <p>Création d'un moteur de rendu from scratch.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-flex">
-            <div class="left">
+</body>
+</html>
