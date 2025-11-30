@@ -3,7 +3,7 @@
     --text-white: #ffffff;
     --text-grey: #888888;
     --accent-pink: #D4A5B7; /* La couleur exacte rose/mauve */
-    --grid-line: rgba(255, 255, 255, 0.03); /* Lignes encore plus subtiles */
+    --grid-line: rgba(255, 255, 255, 0.03); /* Lignes très subtiles */
     
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
@@ -31,7 +31,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 3rem 4rem;
+    /* Marge latérale plus serrée pour l'effet "pro" */
+    padding: 3rem 4rem; 
     position: absolute;
     top: 0;
     width: 100%;
@@ -67,39 +68,38 @@ nav {
     text-transform: uppercase;
 }
 
-.menu a:hover { color: var(--accent-pink); } /* Liens en rose au survol */
+.menu a:hover { color: var(--text-white); } /* Liens en blanc au survol */
 
-/* Style du bouton CONTACT */
+/* Style du bouton CONTACT (Noir avec contour rose, comme la référence) */
 .btn-contact {
-    border: 1px solid var(--accent-pink); /* Contour rose */
-    background: var(--accent-pink); /* Fond rose */
-    color: var(--bg-color); /* Texte noir sur fond rose */
+    border: 1px solid var(--accent-pink); 
+    background: transparent; 
+    color: var(--accent-pink); /* Texte rose */
     padding: 8px 18px;
     border-radius: 50px;
 }
 .btn-contact:hover {
-    background: transparent; /* Fond transparent au survol */
-    color: var(--accent-pink); /* Texte rose au survol */
+    background: var(--accent-pink); /* Fond rose au survol */
+    color: var(--bg-color); /* Texte noir au survol */
 }
 
 
-/* --- HERO SCREEN (CHANGEMENTS DE POSITIONNEMENT) --- */
+/* --- HERO SCREEN (Centre le contenu) --- */
 .hero-screen {
     height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
     align-items: center; /* CENTRE VERTICALEMENT */
-    justify-content: center; /* CENTRE HORIZONTALEMENT */
+    justify-content: flex-start; /* Commence à gauche */
     padding: 0 4rem;
 }
 
-/* Bloc Gauche (pour que le texte reste centré) */
+/* Bloc Gauche (pour que le texte reste centré optiquement) */
 .hero-main {
     max-width: 800px;
-    margin-right: auto; /* Pousse le bloc vers la gauche s'il y a d'autres éléments */
-    margin-left: 10%; /* Décalage vers la droite pour centrer optiquement */
-    /* REMARQUE : Sur le site de référence, le bloc est juste décalé vers la droite, on simule ça */
+    /* Décalage pour l'effet de la référence */
+    margin-left: 10%; 
 }
 
 .tag-box {
@@ -111,18 +111,19 @@ nav {
     letter-spacing: 1.5px;
     padding: 6px 10px;
     text-transform: uppercase;
-    margin-bottom: 2.5rem; /* Espace augmenté */
+    margin-bottom: 2.5rem;
 }
 
 h1 {
     font-family: var(--font-serif);
-    font-size: 6.5rem; /* ENCORE PLUS GRAND */
+    font-size: 6.5rem; 
     line-height: 0.95;
     font-weight: 600;
     margin-bottom: 2rem;
     letter-spacing: -3px;
 }
 
+/* Le point rose est géré par la classe accent sur le point `.` */
 .accent { color: var(--accent-pink); }
 
 .hero-description {
@@ -133,17 +134,19 @@ h1 {
     font-size: 1.1rem;
     line-height: 1.5;
     max-width: 450px;
-    font-weight: 300; /* Texte plus fin */
+    font-weight: 300;
 }
 
 .hero-description strong { color: var(--text-white); font-weight: 500; }
+/* Style de la ligne "Recherche stage" */
 .highlight-text { margin-top: 1rem; color: var(--text-white); border-bottom: 1px solid var(--accent-pink); display: inline-block; padding-bottom: 2px; }
 
-/* Badge Localisation */
+/* Badge Localisation (Calqué sur la référence) */
 .location-pill {
     display: inline-flex;
     align-items: center;
-    background: #111;
+    /* Fond très légèrement plus clair que le fond pour l'effet 3D */
+    background: #0d0d0d;
     border: 1px solid #222;
     padding: 10px 20px;
     border-radius: 50px;
@@ -156,14 +159,19 @@ h1 {
 
 .pin-icon {
     width: 14px; height: 14px;
-    background: rgba(212, 165, 183, 0.2);
+    background: var(--accent-pink); /* Le fond est rose */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
 }
-.pin-inner { width: 6px; height: 6px; background: var(--accent-pink); border-radius: 50%; }
+.pin-inner { 
+    /* Le pin est blanc comme sur la référence */
+    width: 6px; height: 6px; 
+    background: var(--text-white); 
+    border-radius: 50%; 
+}
 
 /* Flèche scroll centre */
 .scroll-indicator {
@@ -209,5 +217,3 @@ h1 {
     .hero-main { margin-left: 0; }
     h1 { font-size: 3.5rem; }
     .scroll-indicator { display: none; }
-    .grid-projects { grid-template-columns: 1fr; }
-}
